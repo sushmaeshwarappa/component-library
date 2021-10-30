@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+    <link href="styles.css" rel="stylesheet">
+    <!--#34D399-->
 </head>
 
 <body>
@@ -25,39 +27,43 @@
 
     <h2>@continers</h2>
     <h3>@fluid container</h3>
-    <p>This is going to be a fluid container. It will go full width of page. With some margin.</p>
+    <div class="container">
+        This is going to be a fluid container. It will go full width of page. With some margin.
+    </div>
 
     <h3>@center container</h3>
-    <p>This is going to be a center container. It will go till a given width and center content.</p>
+    <div class="container container-center">
+        This is going to be a center container. It will go till a given width and center content.
+    </div>
 
     <hr>
 
     <h2>@links</h2>
-    <a href="">Primary link</a>
-    <a href=''>Secondary link</a>
+    <a class="link link-primary" href="">Primary link</a>
+    <a class="link link-secondary" href=''>Secondary link</a>
 
     <hr>
 
     <h2>@lists</h2>
     <h3>unordered list</h3>
     <p>We don't want to show bullets in the unordered list. We'll remove that with CSS.</p>
-    <ul>
+    <ul class="list-non-bullet">
         <li>item one</li>
         <li>item two</li>
         <li>iten three</li>
     </ul>
 
-    <h3>inline lists</h3>
+    <h3>unordered inline lists</h3>
     <p>Instead of going in a new row, we will create a list which will take columns.</p>
-    <ul>
-        <li>item one</li>
-        <li>item two</li>
-        <li>iten three</li>
+    <ul class="list-non-bullet">
+        <li class="list-item-inline">inline item one</li>
+        <li class="list-item-inline">inline item two</li>
+        <li class="list-item-inline">inline item three</li>
     </ul>
 
     <h3>reverse ordered lists</h3>
     <p>Counting of will go reverse for this list</p>
-    <ol>
+    <ol reversed>
         <li>item one</li>
         <li>item two</li>
         <li>iten three</li>
@@ -65,50 +71,57 @@
 
     <hr>
 
-    <nav>
-        <h2>@nav</h2>
-        <p>Navigation is used on the top of the page and used to get to different pages</p>
-        <div class="container-fluid">
-            <div class="brand">theBrandName</div>
-            <ul>
-                <li><a href=''>home</a></li>
-                <li><a href=''>products</a></li>
-                <li><a href=''>about</a></li>
-            </ul>
-        </div>
+    <h2>@nav</h2>
+    <p>Navigation is used on the top of the page and used to get to different pages</p>
+    <nav class="container navigation">
+        <div class="nav-brand">theBrandName</div>
+        <ul class="unordered list-non-bullet nav-pill">
+            <li class="list-item-inline"><a class="link link-active" href=''>home</a></li>
+            <li class="list-item-inline"><a class="link" href=''>products</a></li>
+            <li class="list-item-inline"><a class="link" href=''>about</a></li>
+        </ul>
     </nav>
 
     <hr>
 
     <h2>@header</h2>
-    <header class="conatiner-hero">
-        <img src="images/portfolio.svg">
-        <h1>this is heading h1 inside header</h1>
+    <header class="portfolio">
+        <img class="portfolio-img" src="images/portfolio.svg">
+        <h1 class="portfolio-heading">I'm a <span class="portfolio-inverted">web developer</span></h1>
     </header>
 
     <hr>
 
     <h2>@section</h2>
-    <p>A section is used to separate parts of pages. In marketing websites you would have seen a header followed by
-        sections of features, team, pricing, contact info etc.</p>
     <section class="section">
-        <h2>@normal section</h2>
-        <p>Text defining this section and many more things</p>
-        <a href="">Primary Button</a>
+        <div class="container container-center">
+            <h1>white section</h1>
+            <p>This will have white background.In marketing websites you
+                would have seen a header followed by
+                sections of features, team, pricing, contact info etc.</p>
+            <a href="">Primary Button</a>
+        </div>
+    </section>
+
+    <section class="section ow">
+        <div class="container container-center">
+            <h1>off white section</h1>
+            <p>This will have gray background. A section is used to separate parts of pages. In marketing websites you
+                would have seen a header followed by
+                sections of features, team, pricing, contact info etc.</p>
+        </div>
     </section>
 
     <hr>
 
     <h2>@footer</h2>
-    <footer class="footer conainer-fluid">
-        <div class="container">
-            <div class="heading">header inside footer</div>
-            <ul>
-                <li>social one</li>
-                <li>social two</li>
-                <li>social three</li>
-            </ul>
-        </div>
+    <footer class="footer">
+        <div class="heading">header inside footer</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline"><a class="link" href="">social one</a></li>
+            <li class="list-item-inline"><a class="link" href="">social two</a></li>
+            <li class="list-item-inline"><a class="link" href="">social three</a></li>
+        </ul>
     </footer>
 </body>
 
